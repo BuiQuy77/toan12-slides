@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Manim Slides</title>
+<link href="ly_thuyet_presentation_assets/reveal.css" rel="stylesheet"/>
+<link href="ly_thuyet_presentation_assets/black.css" rel="stylesheet"/>
+<!-- Theme used for syntax highlighting of code -->
+<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+<link href="ly_thuyet_presentation_assets/zenburn.css" rel="stylesheet"/>
+<!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+<body>
+
+    <!-- Floating Classroom Presentation Control Bar -->
+    <div id="classroom-hud" style="
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      background: rgba(15, 20, 28, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 6px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      color: #E2E8F0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+      user-select: none;
+      transition: opacity 0.3s ease;
+    ">
+      <span style="font-weight: 600; color: #38BDF8;">Phím tắt giảng dạy:</span>
+      <span><kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-weight:bold;">Enter</kbd> / <kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-weight:bold;">→</kbd> : Bước tiếp</span>
+      <span><kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-weight:bold;">←</kbd> : Lùi lại</span>
+      <span><kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-weight:bold;">R</kbd> : Xem lại</span>
+      <span><kbd style="background:#334155; padding:2px 6px; border-radius:4px; font-weight:bold;">F</kbd> : Toàn màn hình</span>
+      <button onclick="Reveal.prev(); playActiveVideo(true);" style="
+        background: #1E293B; border: 1px solid #475569; color: #F8FAFC; border-radius: 12px; padding: 2px 10px; cursor: pointer; font-size: 12px; font-weight: 500;
+      " onmouseover="this.style.background='#334155'" onmouseout="this.style.background='#1E293B'">◀ Lùi</button>
+      <button onclick="Reveal.next(); playActiveVideo(true);" style="
+        background: #0284C7; border: 1px solid #38BDF8; color: #FFFFFF; border-radius: 12px; padding: 2px 12px; cursor: pointer; font-size: 12px; font-weight: 600;
+      " onmouseover="this.style.background='#0369A1'" onmouseout="this.style.background='#0284C7'">Tiếp tục ▶</button>
+      <button onclick="document.getElementById('classroom-hud').style.display='none';" style="
+        background: transparent; border: none; color: #94A3B8; cursor: pointer; font-size: 14px; margin-left: 4px;
+      " title="Ẩn thanh hướng dẫn">✕</button>
+    </div>
+    
+<div class="reveal">
+<div class="slides">
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/42ffef299f9f1acb.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/b4a070ec024c7d80.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/9cb9280fbba22578.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/13ae5ff9170f285e.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/eac49d2a6e6b20b4.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/20ebcaad38f12597.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/6dbf578295bc27c4.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/048491059eaf0b00.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/0e69092b55df37c6.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/c9debd8ad4036751.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/9ea8a2b6dbc8b607.mp4" data-background-video-muted="">
+</section>
+<section data-background-color="#0f141c" data-background-size="contain" data-background-video="ly_thuyet_presentation_assets/5f5ea0d5e4208733.mp4" data-background-video-muted="">
+</section>
+</div>
+</div>
+<script src="ly_thuyet_presentation_assets/reveal.js"></script>
+<script src="ly_thuyet_presentation_assets/notes.js"></script>
+<!-- To include plugins, see: https://revealjs.com/plugins/ -->
+<!-- <script src="index.js"></script> -->
+<script>
+      Reveal.initialize({
+        // The "normal" size of the presentation, aspect ratio will
+        // be preserved when the presentation is scaled to fit different
+        // resolutions. Can be specified using percentage units.
+        width: '100%',
+        height: '100%',
+        // Factor of the display size that should remain empty around
+        // the content
+        margin: 0.04,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 2.0,
+        // Display presentation control arrows
+        controls: true,
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        // - true:    Show slide number
+        // - false:   Hide slide number
+        //
+        // Can optionally be set as a string that specifies the number formatting:
+        // - "h.v":   Horizontal . vertical slide number (default)
+        // - "h/v":   Horizontal / vertical slide number
+        // - "c":   Flattened slide number
+        // - "c/t":   Flattened slide number / total slides
+        //
+        // Alternatively, you can provide a function that returns the slide
+        // number for the current slide. The function should take in a slide
+        // object and return an array with one string [slideNumber] or
+        // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+        slideNumber: 'c/t',
+        // Can be used to limit the contexts in which the slide number appears
+        // - "all":      Always show the slide number
+        // - "print":    Only when printing to PDF
+        // - "speaker":  Only in the speaker view
+        showSlideNumber: 'all',
+        // Use 1 based indexing for # links to match slide number (default is zero
+        // based)
+        hashOneBasedIndex: false,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: false,
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: false,
+        // Enable support for jump-to-slide navigation shortcuts
+        jumpToSlide: true,
+        // Push each slide change to the browser history.  Implies `hash: true`
+        history: false,
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+        // Optional function that blocks keyboard events when retuning false
+        //
+        // If you set this to 'focused', we will only capture keyboard events
+        // for embedded decks when they are in focus
+        keyboardCondition: null,
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+        // Enable the slide overview mode
+        overview: true,
+        // Vertical centering of slides
+        center: true,
+        // Enables touch navigation on devices with touch input
+        touch: true,
+        // Loop the presentation
+        loop: false,
+        // Change the presentation direction to be RTL
+        rtl: false,
+        // Changes the behavior of our navigation directions.
+        //
+        // "default"
+        // Left/right arrow keys step between horizontal slides, up/down
+        // arrow keys step between vertical slides. Space key steps through
+        // all slides (both horizontal and vertical).
+        //
+        // "linear"
+        // Removes the up/down arrows. Left/right arrows step through all
+        // slides (both horizontal and vertical).
+        //
+        // "grid"
+        // When this is enabled, stepping left/right from a vertical stack
+        // to an adjacent vertical stack will land you at the same vertical
+        // index.
+        //
+        // Consider a deck with six slides ordered in two vertical stacks:
+        // 1.1    2.1
+        // 1.2    2.2
+        // 1.3    2.3
+        //
+        // If you're on slide 1.3 and navigate right, you will normally move
+        // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
+        // from 1.3 -> 2.3.
+        navigationMode: 'default',
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+        // Turns fragments on and off globally
+        fragments: true,
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+        // Flags if we should show a help overlay when the question-mark
+        // key is pressed
+        help: true,
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+        // Global override for autolaying embedded media (video/audio/iframe)
+        // - null:   Media will only autoplay if data-autoplay is present
+        // - true:   All media will autoplay, regardless of individual setting
+        // - false:  No media will autoplay, regardless of individual setting
+        autoPlayMedia: true,
+        // Global override for preloading lazy-loaded iframes
+        // - null:   Iframes with data-src AND data-preload will be loaded when within
+        //           the viewDistance, iframes with only data-src will be loaded when visible
+        // - true:   All iframes with data-src will be loaded when within the viewDistance
+        // - false:  All iframes with data-src will be loaded only when visible
+        preloadIframes: null,
+        // Can be used to globally disable auto-animation
+        autoAnimate: true,
+        // Optionally provide a custom element matcher that will be
+        // used to dictate which elements we can animate between.
+        autoAnimateMatcher: null,
+        // Default settings for our auto-animate transitions, can be
+        // overridden per-slide or per-element via data arguments
+        autoAnimateEasing: 'ease',
+        autoAnimateDuration: 1.0,
+        autoAnimateUnmatched: true,
+        // CSS properties that can be auto-animated. Position & scale
+        // is matched separately so there's no need to include styles
+        // like top/right/bottom/left, width/height or margin.
+        autoAnimateStyles: ['opacity', 'color', 'background-color', 'padding', 'font-size', 'line-height', 'letter-spacing', 'border-width', 'border-color', 'border-radius', 'outline', 'outline-offset'],
+        // Controls automatic progression to the next slide
+        // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
+        //           is present on the current slide or fragment
+        // - 1+:     All slides will progress automatically at the given interval
+        // - false:  No auto-sliding, even if data-autoslide is present
+        autoSlide: 0,
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+        // Use this method for navigation when auto-sliding (defaults to navigateNext)
+        autoSlideMethod: null,
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+        // Opens links in an iframe preview overlay
+        // Add `data-preview-link` and `data-preview-link="false"` to customize each link
+        // individually
+        previewLinks: false,
+        // Exposes the reveal.js API through window.postMessage
+        postMessage: true,
+        // Dispatches all reveal.js events to the parent window through postMessage
+        postMessageEvents: false,
+        // Focuses body when page changes visibility to ensure keyboard shortcuts work
+        focusBodyOnPageVisibilityChange: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'none', // none/fade/slide/convex/concave/zoom
+        // The maximum number of pages a single slide can expand onto when printing
+        // to PDF, unlimited by default
+        pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+        // Prints each fragment on a separate slide
+        pdfSeparateFragments: true,
+        // Offset used to reduce the height of content within exported PDF pages.
+        // This exists to account for environment differences based on how you
+        // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+        // on precisely the total height of the document whereas in-browser
+        // printing has to end one pixel before.
+        pdfPageHeightOffset: -1,
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+        // The display mode that will be used to show slides
+        display: 'block',
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000
+      });
+      if (currentVideos.length > 0) {
+            if (currentVideos[0].paused == true) currentVideos[0].play();
+            else currentVideos[0].pause();
+          } else {
+            Reveal.next();
+          }
+        }
+      );
+    
+      // --- CUSTOM CLASSROOM INTERACTION CONTROLLER ---
+      function getActiveSlideVideos() {
+        // 1. Look for video in present background
+        const presentBg = document.querySelector('.slide-background.present');
+        if (presentBg) {
+          const vids = presentBg.querySelectorAll('video');
+          if (vids.length > 0) return Array.from(vids);
+        }
+        // 2. Fallback: find any video associated with present slide
+        const allVids = document.querySelectorAll('.slide-background video');
+        return Array.from(allVids).filter(v => {
+          const parent = v.closest('.slide-background');
+          return parent && parent.classList.contains('present');
+        });
+      }
+
+      function playActiveVideo(restart = true) {
+        setTimeout(() => {
+          const vids = getActiveSlideVideos();
+          vids.forEach(v => {
+            v.muted = true;
+            v.setAttribute('muted', '');
+            v.setAttribute('playsinline', '');
+            if (restart) {
+              v.currentTime = 0;
+            }
+            const playPromise = v.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(err => {
+                console.log('Video autoplay resolved:', err);
+              });
+            }
+          });
+        }, 60);
+      }
+
+      // Slide changed event -> trigger video playback
+      Reveal.on('slidechanged', (event) => {
+        playActiveVideo(true);
+      });
+
+      Reveal.on('ready', (event) => {
+        document.querySelectorAll('video').forEach(v => {
+          v.muted = true;
+          v.setAttribute('muted', '');
+          v.setAttribute('playsinline', '');
+        });
+        playActiveVideo(true);
+      });
+
+      // Keydown listener for classroom remotes, Enter, Right Arrow, Space, etc.
+      window.addEventListener('keydown', function(e) {
+        // ENTER (13), ARROW RIGHT (39), SPACE (32), PAGE DOWN (34), N (78) -> NEXT STEP
+        if (e.key === 'Enter' || e.keyCode === 13 ||
+            e.key === 'ArrowRight' || e.keyCode === 39 ||
+            e.key === ' ' || e.keyCode === 32 ||
+            e.key === 'PageDown' || e.keyCode === 34 ||
+            e.key === 'n' || e.key === 'N') {
+          e.preventDefault();
+          Reveal.next();
+          playActiveVideo(true);
+        }
+        // ARROW LEFT (37), PAGE UP (33), BACKSPACE (8), P (80) -> PREVIOUS STEP
+        else if (e.key === 'ArrowLeft' || e.keyCode === 37 ||
+                 e.key === 'PageUp' || e.keyCode === 33 ||
+                 e.key === 'Backspace' || e.keyCode === 8 ||
+                 e.key === 'p' || e.key === 'P') {
+          e.preventDefault();
+          Reveal.prev();
+          playActiveVideo(true);
+        }
+        // R (82) -> REPLAY current step animation
+        else if (e.key === 'r' || e.key === 'R') {
+          e.preventDefault();
+          playActiveVideo(true);
+        }
+        // F (70) -> TOGGLE FULLSCREEN
+        else if (e.key === 'f' || e.key === 'F') {
+          e.preventDefault();
+          if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(() => {});
+          } else {
+            document.exitFullscreen().catch(() => {});
+          }
+        }
+      }, true);
+
+      // Click on background/slide advances to next step
+      document.addEventListener('click', function(e) {
+        // Don't trigger if clicking on controls or links
+        if (e.target.closest('.navigate-next') || 
+            e.target.closest('.navigate-prev') || 
+            e.target.closest('.navigate-up') || 
+            e.target.closest('.navigate-down') ||
+            e.target.closest('a') ||
+            e.target.closest('button')) {
+          return;
+        }
+        Reveal.next();
+        playActiveVideo(true);
+      });
+    
+    </script>
+
+<style>
+  .manim-control-bar {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    box-shadow: 0 12px 30px -5px rgba(0, 0, 0, 0.6);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: white;
+    user-select: none;
+    transition: opacity 0.3s;
+  }
+  .manim-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+  }
+  .manim-btn:hover {
+    background: rgba(20, 184, 166, 0.85);
+    border-color: rgba(20, 184, 166, 1);
+    transform: scale(1.03);
+  }
+  .manim-btn.primary {
+    background: #0d9488;
+    border-color: #14b8a6;
+    color: white;
+  }
+  .manim-btn.primary:hover {
+    background: #0f766e;
+  }
+  .manim-status {
+    font-size: 12px;
+    font-weight: 800;
+    color: #5eead4;
+    padding: 0 8px;
+    letter-spacing: 0.5px;
+  }
+</style>
+
+<div class="manim-control-bar" id="manimControlBar">
+  <button class="manim-btn" onclick="Reveal.prev()" title="Lùi lại slide trước (Phím ⬅️)">
+    ◀ Lùi lại
+  </button>
+  <button class="manim-btn primary" onclick="Reveal.next()" title="Tiếp tục slide sau (Phím ➡️)">
+    Tiếp tục ▶
+  </button>
+  <span class="manim-status" id="manimSlideCounter">1 / 1</span>
+  <button class="manim-btn" id="manimAutoBtn" onclick="toggleAutoPlay()" title="Tự động chuyển tiếp khi hết hoạt họa">
+    ▶ Tự động: TẮT
+  </button>
+  <button class="manim-btn" onclick="toggleFullScreen()" title="Phóng to toàn màn hình">
+    ⛶ Toàn màn hình
+  </button>
+</div>
+
+<script>
+  let isAutoPlay = false;
+  function updateCounter() {
+    if (typeof Reveal === 'undefined') return;
+    const indices = Reveal.getIndices();
+    const total = Reveal.getTotalSlides();
+    const el = document.getElementById('manimSlideCounter');
+    if (el) el.innerText = (indices.h + 1) + ' / ' + total;
+  }
+  function toggleAutoPlay() {
+    isAutoPlay = !isAutoPlay;
+    const btn = document.getElementById('manimAutoBtn');
+    if (btn) {
+      btn.innerText = isAutoPlay ? '⏸ Tự động: BẬT' : '▶ Tự động: TẮT';
+      btn.style.background = isAutoPlay ? '#059669' : '';
+      btn.style.borderColor = isAutoPlay ? '#10b981' : '';
+    }
+    if (isAutoPlay) advanceIfEnded();
+  }
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+    }
+  }
+  function advanceIfEnded() {
+    if (typeof Reveal === 'undefined') return;
+    const currentSlide = Reveal.getCurrentSlide();
+    if (!currentSlide) return;
+    const bg = currentSlide.slideBackgroundContentElement || currentSlide;
+    const video = bg.querySelector('video') || document.querySelector('.slide-background.present video');
+    if (video && (video.ended || (video.paused && video.currentTime > 0))) {
+      Reveal.next();
+    }
+  }
+  function attachVideoEndedListener() {
+    updateCounter();
+    const currentSlide = Reveal.getCurrentSlide();
+    if (!currentSlide) return;
+    const bg = currentSlide.slideBackgroundContentElement || currentSlide;
+    const video = bg.querySelector('video') || document.querySelector('.slide-background.present video');
+    if (video) {
+      video.onended = () => {
+        if (isAutoPlay) {
+          setTimeout(() => {
+            if (isAutoPlay) Reveal.next();
+          }, 800);
+        }
+      };
+    }
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof Reveal !== 'undefined') {
+      Reveal.on('slidechanged', attachVideoEndedListener);
+      Reveal.on('ready', attachVideoEndedListener);
+      updateCounter();
+    }
+  });
+</script>
+
+</body>
+</html>
