@@ -9,7 +9,6 @@ cd /d "%~dp0"
 
 if not exist .git (
     git init
-    git branch -M main
 )
 
 git config user.name "BuiQuy77"
@@ -20,6 +19,7 @@ git remote add origin https://github.com/BuiQuy77/toan12-slides.git
 
 git add .
 git commit -m "Deploy interactive Manim Slides for Toan 12"
+git branch -M main
 
 echo.
 echo Dang push len branch main...
